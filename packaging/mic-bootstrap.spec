@@ -26,7 +26,7 @@ BuildRequires:  psmisc
 BuildRequires:  grep
 BuildRequires:  lsof
 BuildRequires:  mic
-#BuildRequires:  busybox
+BuildRequires:  busybox
 BuildRequires:  syslinux
 BuildRequires:  syslinux-extlinux
 #BuildRequires:  rpm-security-plugin
