@@ -1,2 +1,5 @@
+* Mon Jun 03 2013 Anas Nashif <anas.nashif@intel.com> accepted/tizen_2.1/20130520.103448@7e6ff80
+- fixed arch exclusion
+
 * Fri Nov  9 14:48:24 CST 2012 Gui Chen <gui.chen@intel.com> - 1.0
 - Initial version on tizen.org
