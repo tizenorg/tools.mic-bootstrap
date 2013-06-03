@@ -7,7 +7,7 @@ Version:	1.0
 Release:	0
 AutoReqProv:    0
 Provides:       %{name}
-ExclusiveArch:  x86_64, %ix86
+ExclusiveArch:  x86_64 %ix86
 
 Summary:	mic bootstrap
 Group:		System/Tools
