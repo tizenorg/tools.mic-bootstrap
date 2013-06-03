@@ -4,10 +4,10 @@
 
 Name:		mic-bootstrap
 Version:	1.0
-Release:	1
+Release:	0
 AutoReqProv:    0
 Provides:       %{name}
-ExclusiveArch:  i586
+ExclusiveArch:  x86_64, %ix86
 
 Summary:	mic bootstrap
 Group:		System/Tools
@@ -16,7 +16,7 @@ URL:		http://www.tizen.org/
 Source100:      baselibs.conf
 
 BuildRequires:	rpm
-BuildRequires:  rpm-python
+BuildRequires:  python-rpm
 BuildRequires:  util-linux
 BuildRequires:  coreutils
 BuildRequires:  python-xml
