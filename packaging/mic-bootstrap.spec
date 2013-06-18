@@ -30,6 +30,7 @@ BuildRequires:  busybox
 BuildRequires:  syslinux
 BuildRequires:  syslinux-extlinux
 BuildRequires:  rpm-security-plugin
+Source100:      rpmlintrc
 
 %description
 used for mic bootstrap, this package will be repackaged for i586 and arm libs.
