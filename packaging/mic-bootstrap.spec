@@ -74,6 +74,9 @@ sed -f $sedtmp -i filestoinclude1
 # tar copy to bootstrap dir under buildroot
 # prefix /bootstrap will fix conflicts
 tar -T filestoinclude1 -cpf - | ( cd %buildroot/bootstrap && tar -xpf - )
+# tar copy /usr/bin and /usr/sbin to /bin and /sbin to fix symblic lost in tar
+(cd /usr/bin && tar -cpf - *) | (cd %buildroot/bootstrap/bin && tar -xpf -)
+(cd /usr/sbin && tar -cpf - *) | (cd %buildroot/bootstrap/sbin && tar -xpf -)
 rm filestoinclude1
 
 # Todo: refractor
