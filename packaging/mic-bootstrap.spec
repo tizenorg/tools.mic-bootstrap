@@ -14,6 +14,7 @@ Group:		System/Tools
 License:	GPLv2
 URL:		http://www.tizen.org/
 Source100:      baselibs.conf
+Source101:      rpmlintrc
 
 BuildRequires:	rpm
 #BuildRequires:	!rpmlint !rpmlint-min !rpmlint-tizen
@@ -22,16 +23,15 @@ BuildRequires:  util-linux
 BuildRequires:  coreutils
 BuildRequires:  python-xml
 BuildRequires:  python-zypp
-BuildRequires:  kmod
+BuildRequires:  kmod-compat
 BuildRequires:  psmisc
 BuildRequires:  grep
 BuildRequires:  lsof
 BuildRequires:  mic
-BuildRequires:  busybox
+#BuildRequires:  busybox
 BuildRequires:  syslinux
 BuildRequires:  syslinux-extlinux
 BuildRequires:  rpm-security-plugin
-Source101:      rpmlintrc
 
 %description
 used for mic bootstrap, this package will be repackaged for i586 and arm libs.
