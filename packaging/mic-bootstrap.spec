@@ -33,6 +33,7 @@ BuildRequires:  syslinux
 BuildRequires:  syslinux-extlinux
 BuildRequires:  rpm-security-plugin
 BuildRequires:  bmap-tools
+BuildRequires:  ca-certificates-mozilla
 
 %description
 used for mic bootstrap, this package will be repackaged for i586 and arm libs.
