@@ -32,7 +32,6 @@ BuildRequires:  mic
 BuildRequires:  syslinux
 BuildRequires:  syslinux-extlinux
 BuildRequires:  rpm-security-plugin
-BuildRequires:  bmap-tools
 BuildRequires:  ca-certificates-mozilla
 
 %description
