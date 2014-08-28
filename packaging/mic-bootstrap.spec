@@ -1,6 +1,6 @@
 %define _build_name_fmt    %%{ARCH}/%%{NAME}-%%{VERSION}-%%{RELEASE}.%%{ARCH}.vanish.rpm
 %define __os_install_post %{nil}
-%define nodebug 1
+%define nodebug 0
 
 Name:		mic-bootstrap
 Version:	1.0
