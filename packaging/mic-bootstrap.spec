@@ -94,6 +94,16 @@ done
 rm filestoinclude1
 rm filestoinclude2
 
+%ifarch aarch64
+mv lib/* usr/lib
+mv lib64/* usr/lib
+mv usr/lib64/* usr/lib
+rmdir lib lib64 usr/lib64
+ln -snf usr/lib lib
+ln -snf usr/%{_lib} %{_lib}
+ln -snf lib usr/%{_lib}
+%endif
+
 set -x
 
 %clean
