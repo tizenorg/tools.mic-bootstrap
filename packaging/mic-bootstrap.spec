@@ -4,10 +4,10 @@
 
 Name:		mic-bootstrap
 Version:	1.0
-Release:	1
+Release:	1.15
 AutoReqProv:    0
 Provides:       %{name}
-ExclusiveArch:  i586
+ExclusiveArch:  %{ix86}
 
 Summary:	mic bootstrap
 Group:		System/Tools
@@ -30,6 +30,8 @@ BuildRequires:  busybox
 BuildRequires:  syslinux
 BuildRequires:  syslinux-extlinux
 BuildRequires:  rpm-security-plugin
+BuildRequires:  smack-utils
+BuildRequires:  zip
 BuildRequires:  toybox
 
 %description
@@ -49,6 +51,7 @@ set +x
 mkdir -p %buildroot
 mkdir -p %buildroot/bootstrap
 rpm -qla > filestoinclude1
+echo /usr/bin/java >> filestoinclude1
 
 # ignore files - construct sed script
 sedtmp="sedtmp.$$"
@@ -96,3 +99,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f filestoinclude
 
+%changelog
+* Fri Nov  9 2012 Gui Chen <gui.chen@intel.com> - 1.0
+- Initial version on tizen.org
