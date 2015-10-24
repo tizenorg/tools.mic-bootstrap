@@ -1,13 +1,14 @@
 %define _build_name_fmt    %%{ARCH}/%%{NAME}-%%{VERSION}-%%{RELEASE}.%%{ARCH}.vanish.rpm
 %define __os_install_post %{nil}
 %define nodebug 1
+%define debug_package %{nil}
 
 Name:		mic-bootstrap
 Version:	1.0
 Release:	1.15
 AutoReqProv:    0
 Provides:       %{name}
-ExclusiveArch:  %{ix86}
+ExclusiveArch:  %{ix86} x86_64
 
 Summary:	mic bootstrap
 Group:		System/Tools
@@ -32,7 +33,6 @@ BuildRequires:  syslinux-extlinux
 BuildRequires:  rpm-security-plugin
 BuildRequires:  smack-utils
 BuildRequires:  zip
-BuildRequires:  toybox
 
 %description
 used for mic bootstrap, this package will be repackaged for i586 and arm libs.
@@ -50,6 +50,7 @@ set +x
 
 mkdir -p %buildroot
 mkdir -p %buildroot/bootstrap
+mkdir -p %buildroot/usr/lib/debug/
 rpm -qla > filestoinclude1
 echo /usr/bin/java >> filestoinclude1
 
@@ -98,6 +99,7 @@ set -x
 rm -rf $RPM_BUILD_ROOT
 
 %files -f filestoinclude
+%exclude /usr/lib/debug/
 
 %changelog
 * Fri Nov  9 2012 Gui Chen <gui.chen@intel.com> - 1.0
