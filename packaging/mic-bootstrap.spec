@@ -32,7 +32,7 @@ BuildRequires:  mic
 BuildRequires:  syslinux
 BuildRequires:  syslinux-extlinux
 BuildRequires:  rpm-security-plugin
-BuildRequires:  ca-certificates-mozilla
+BuildRequires:  ca-certificates
 BuildRequires:  qemu-tools
 BuildRequires:  bmap-tools
 
